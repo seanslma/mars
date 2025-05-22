@@ -1,0 +1,2 @@
+# mars
+My rust repository

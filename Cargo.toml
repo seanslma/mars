@@ -4,7 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [lib]
-name = "mars" # This will be the name of your Python module
+name = "mars" # name of Python module
+path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]

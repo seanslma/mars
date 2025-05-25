@@ -1,0 +1,11 @@
+[package]
+name = "mars"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "mars" # This will be the name of your Python module
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21.2", features = ["extension-module"] } # Use the latest stable pyo3 version

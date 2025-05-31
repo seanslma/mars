@@ -1,12 +1,32 @@
-[package]
-name = "mars"
-version = "0.1.0"
+# [package]
+# name = "mars"
+# version = "0.1.0"
+# edition = "2024"
+
+# [lib]
+# name = "mars" # name of Python module
+# path = "src/lib.rs"
+# crate-type = ["cdylib"]
+
+# [dependencies]
+# pyo3 = { version = "0.21.2", features = ["extension-module"] } # Use the latest stable pyo3 version
+
+[workspace]
+members = [
+    "mars", "mars_p3",
+    "mars_py",
+]
+
+resolver = "2"
+
+[workspace.package]
+version = "0.0.1"
 edition = "2024"
+authors = ["Sean Ma"]
+description = "My Rust/Python repo"
 
-[lib]
-name = "mars" # name of Python module
-path = "src/lib.rs"
-crate-type = ["cdylib"]
+[profile.release]
+opt-level = 3
 
-[dependencies]
-pyo3 = { version = "0.21.2", features = ["extension-module"] } # Use the latest stable pyo3 version
+[profile.bench]
+opt-level = 3

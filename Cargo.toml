@@ -1,19 +1,7 @@
-# [package]
-# name = "mars"
-# version = "0.1.0"
-# edition = "2024"
-
-# [lib]
-# name = "mars" # name of Python module
-# path = "src/lib.rs"
-# crate-type = ["cdylib"]
-
-# [dependencies]
-# pyo3 = { version = "0.21.2", features = ["extension-module"] } # Use the latest stable pyo3 version
-
 [workspace]
 members = [
-    "mars", "mars_p3",
+    "mars",
+    "mars_p3",
     "mars_py",
 ]
 

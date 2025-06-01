@@ -7,7 +7,6 @@ pub fn version() -> String {
 }
 
 
-
 /// A Python module named `mars` implemented in Rust, a collection of classes/functions
 #[pymodule]
 fn mars_py(_py: Python, m: &Bound<'_, PyModule>) -> PyResult<()> {
@@ -38,6 +37,9 @@ fn mars_py(_py: Python, m: &Bound<'_, PyModule>) -> PyResult<()> {
 
     // Add the class in the crate itself to the module
     m.add_class::<Person>()?;
+
+    // Version
+    m.add("__version__", env!("CARGO_PKG_VERSION"))?;
 
     Ok(())
 }

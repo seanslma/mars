@@ -1,0 +1,21 @@
+[build-system]
+requires = ["maturin>=1.3.2"]
+build-backend = "maturin"
+
+[project]
+name = "mars"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python",
+]
+
+[tool.black]
+skip-string-normalization = true
+
+[tool.pylint.messages_control]
+max-line-length = 88
+
+[tool.maturin]
+python-source = "mars"
+include = ["*"]

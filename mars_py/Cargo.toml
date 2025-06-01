@@ -1,7 +1,9 @@
 [package]
 name = "mars_py"
-version = "0.0.1"
-edition = "2024"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+description.workspace = true
 
 [lib]
 name = "mars" # This is the name Python will use to import the module

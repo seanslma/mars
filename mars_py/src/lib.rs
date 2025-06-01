@@ -6,10 +6,19 @@ pub fn version() -> String {
     mars::version().to_string()
 }
 
+#[pymodule]
+fn opt(py: Python, m: &Bound<PyModule>) -> PyResult<()> {
+    use polars_python::lazyframe::visitor::nodes::*;
+    m.add_class::<PythonScan>().unwrap();
+    Ok(())
+}
 
 /// A Python module named `mars` implemented in Rust, a collection of classes/functions
 #[pymodule]
-fn mars_py(_py: Python, m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn mars(py: Python, m: &Bound<PyModule>) -> PyResult<()> {
+    // Submodules
+    m.add_wrapped(wrap_pymodule!(_ir_nodes))?;
+
     // Wrap function `hi` directly from crate `mars`
     #[pyfn(m)]
     #[pyo3(name = "hi")] // Python function name

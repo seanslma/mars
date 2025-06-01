@@ -1,3 +1,6 @@
+pub mod opt;
+pub mod sim;
+
 use pyo3::prelude::*;
 
 /// A simple struct that will expose to Python

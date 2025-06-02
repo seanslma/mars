@@ -1,11 +1,10 @@
 [workspace]
+resolver = "2"
 members = [
     "mars",
     "mars_p3",
     "mars_py",
 ]
-
-resolver = "2"
 
 [workspace.package]
 version = "0.0.1"
@@ -13,8 +12,17 @@ edition = "2024"
 authors = ["Sean Ma"]
 description = "My Rust/Python repo"
 
+[workspace.dependencies]
+pyo3 = "0.24.2"
+
+mars = { version = "0.0.1", path = "mars", default-features = false }
+mars_p3 = { version = "0.0.1", path = "mars_p3", default-features = false }
+
 [profile.release]
-opt-level = 3
+opt-level = 3 # "s", "z", 1, 2, 3
+lto = "fat"   # "fat", "thin", false
+codegen-units = 1
+strip = true
 
 [profile.bench]
 opt-level = 3

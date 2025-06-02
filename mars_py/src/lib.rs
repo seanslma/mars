@@ -8,8 +8,8 @@ pub fn version() -> String {
 
 #[pymodule]
 fn opt(py: Python, m: &Bound<PyModule>) -> PyResult<()> {
-    use polars_python::lazyframe::visitor::nodes::*;
-    m.add_class::<PythonScan>().unwrap();
+    use mars_p3::opt::gurobipy::lpsol::*;
+    m.add_function(wrap_pyfunction!(hi, m)?)?;
     Ok(())
 }
 
@@ -17,7 +17,7 @@ fn opt(py: Python, m: &Bound<PyModule>) -> PyResult<()> {
 #[pymodule]
 fn mars(py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     // Submodules
-    m.add_wrapped(wrap_pymodule!(_ir_nodes))?;
+    m.add_wrapped(wrap_pymodule!(opt))?;
 
     // Wrap function `hi` directly from crate `mars`
     #[pyfn(m)]

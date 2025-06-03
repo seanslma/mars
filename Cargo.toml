@@ -17,6 +17,7 @@ pyo3 = "0.24.2"
 
 mars = { version = "0.0.1", path = "mars", default-features = false }
 mars_p3 = { version = "0.0.1", path = "mars_p3", default-features = false }
+mars_py = { version = "0.0.1", path = "mars_py", default-features = false }
 
 [profile.release]
 opt-level = 3 # "s", "z", 1, 2, 3

@@ -10,5 +10,6 @@ name = "mars" # This is the name Python will use to import the module
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = { version = "0.21.2", features = ["extension-module"] }
-mars = { path = "../mars_p3" } # Dependency on the 'mars_p3' crate within the workspace
+mars = { workspace = true }
+mars_py = { workspace = true }
+pyo3 = { workspace = true }

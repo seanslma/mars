@@ -2,6 +2,11 @@
 requires = ["maturin>=1.3.2"]
 build-backend = "maturin"
 
+# This is important for loading the namespaces in python
+[lib]
+name = "mars" # This is the name Python will use to import the module
+crate-type = ["cdylib"]
+
 [project]
 name = "mars"
 requires-python = ">=3.9"
@@ -9,6 +14,7 @@ classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python",
 ]
+dynamic = ["version"]
 
 [tool.black]
 skip-string-normalization = true
@@ -17,5 +23,5 @@ skip-string-normalization = true
 max-line-length = 88
 
 [tool.maturin]
-python-source = "mars"
+python-source = "./"
 include = ["*"]

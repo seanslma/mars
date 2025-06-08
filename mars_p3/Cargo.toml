@@ -1,10 +1,15 @@
 [package]
 name = "mars_p3"
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-description.workspace = true
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+description = { workspace = true }
+
+[lib]
+name = "mars"
+crate-type = ["cdylib"]
 
 [dependencies]
 mars = { workspace = true }
-pyo3 = { workspace = true }
+pyo3 = { workspace = true, features = ["extension-module"] }
+# mars = { path = "../mars" }

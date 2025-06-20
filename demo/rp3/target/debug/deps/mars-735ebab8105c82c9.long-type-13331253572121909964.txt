@@ -1,1 +1,0 @@
-for<'a, 'b> fn(pyo3::Python<'a>, pyo3::Bound<'b, pyo3::prelude::PyModule>) -> Result<(), PyErr> {grb}

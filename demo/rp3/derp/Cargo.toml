@@ -1,0 +1,15 @@
+[package]
+name = "derp"
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+description = { workspace = true }
+
+# [lib]
+# name = "ders" # This is the name Python will use to import the module
+# crate-type = ["cdylib"]
+
+[dependencies]
+ders = { workspace = true }
+der3 = { workspace = true }
+pyo3 = { workspace = true, features = ["extension-module"] }

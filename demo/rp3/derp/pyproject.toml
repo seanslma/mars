@@ -1,0 +1,15 @@
+[build-system]
+requires = ["maturin>=1.0"]
+build-backend = "maturin"
+
+[project]
+name = "ders"
+version = "0.0.1"
+description = "Python bindings for ders crate"
+requires-python = ">=3.9"
+
+[tool.maturin]
+python-source = "."
+module-name = "ders"
+bindings = "pyo3"
+manifest-path = "../crates/der3/Cargo.toml"

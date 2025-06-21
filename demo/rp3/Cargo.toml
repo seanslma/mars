@@ -1,6 +1,12 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/mars",
-    "crates/mars_p3"
+    "crates/ders",
+    "crates/der3"
 ]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+authors = ["Sean Ma"]
+description = "My Rust/Python repo"

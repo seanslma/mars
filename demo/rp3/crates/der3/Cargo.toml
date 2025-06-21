@@ -1,0 +1,12 @@
+[package]
+name = "der3"
+version = { workspace = true }
+edition = { workspace = true }
+
+[lib]
+name = "ders"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module"] }
+ders = { path = "../ders" }

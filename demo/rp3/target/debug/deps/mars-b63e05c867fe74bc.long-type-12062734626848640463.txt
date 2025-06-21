@@ -1,0 +1,1 @@
+&{closure@/home/sma/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-0.21.2/src/macros.rs:137:10: 137:24}

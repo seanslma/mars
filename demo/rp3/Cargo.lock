@@ -21,6 +21,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "der3"
+version = "0.0.1"
+dependencies = [
+ "ders",
+ "pyo3",
+]
+
+[[package]]
+name = "ders"
+version = "0.0.1"
+
+[[package]]
 name = "heck"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -46,18 +58,6 @@ checksum = "96936507f153605bddfcda068dd804796c84324ed2510809e5b2a624c81da765"
 dependencies = [
  "autocfg",
  "scopeguard",
-]
-
-[[package]]
-name = "mars"
-version = "0.1.0"
-
-[[package]]
-name = "mars_p3"
-version = "0.1.0"
-dependencies = [
- "mars",
- "pyo3",
 ]
 
 [[package]]

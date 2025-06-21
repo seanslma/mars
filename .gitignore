@@ -1,1 +1,8 @@
-/target
+# Ignore all target directories
+**/target/
+
+# Ignore Cargo.lock in libraries (keep it in binaries)
+Cargo.lock
+
+# Ignore backup files
+**/*.rs.bk

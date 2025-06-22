@@ -1,6 +1,6 @@
-from .ders import *  # loads the native Rust module
+from .ders import ders  # loads the native Rust module
 
-from .sim import util
+# from .sim import util
 
 # from . import ders as rust_mod
 

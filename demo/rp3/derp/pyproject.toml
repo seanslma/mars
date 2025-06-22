@@ -4,7 +4,8 @@ build-backend = "maturin"
 
 [project]
 name = "ders"
-version = "0.0.1"
+# version = "0.0.1"
+dynamic = ["version"]
 description = "Python bindings for ders crate"
 requires-python = ">=3.9"
 
@@ -13,3 +14,6 @@ python-source = "."
 module-name = "ders"
 bindings = "pyo3"
 manifest-path = "../crates/der3/Cargo.toml"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]

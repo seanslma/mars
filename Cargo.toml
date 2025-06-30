@@ -14,8 +14,8 @@ authors = ["Sean Ma"]
 description = "My Rust/Python repo"
 
 [workspace.dependencies]
-pyo3 = "0.24.2"
 lazy_static = "1.4"
+pyo3 = "0.24.2"
 regex = "1"
 
 mars = { version = "0.0.1", path = "mars", default-features = false }

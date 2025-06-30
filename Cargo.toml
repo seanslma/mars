@@ -14,6 +14,8 @@ description = "My Rust/Python repo"
 
 [workspace.dependencies]
 pyo3 = "0.24.2"
+lazy_static = "1.4"
+regex = "1"
 
 mars = { version = "0.0.1", path = "mars", default-features = false }
 mars_p3 = { version = "0.0.1", path = "mars_p3", default-features = false }
